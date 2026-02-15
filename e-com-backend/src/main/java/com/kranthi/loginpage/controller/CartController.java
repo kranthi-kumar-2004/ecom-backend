@@ -15,7 +15,7 @@ import com.kranthi.loginpage.dto.CartResponse;
 import com.kranthi.loginpage.service.CartService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 @RequestMapping("/cart")
 public class CartController {
 
