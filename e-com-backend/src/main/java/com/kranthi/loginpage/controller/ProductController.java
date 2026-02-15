@@ -1,0 +1,21 @@
+package com.kranthi.loginpage.controller;
+import java.util.List;
+import com.kranthi.loginpage.entity.Product;
+import com.kranthi.loginpage.repository.ProductRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@CrossOrigin(origins="http://localhost:5173")
+public class ProductController {
+    @Autowired
+    private ProductRepository repo;
+    @GetMapping("/products")
+
+    public List<Product>getAllProducts(){
+        return repo.findAll();
+    }
+}
